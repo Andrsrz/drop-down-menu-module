@@ -1,9 +1,14 @@
-# Drop-down Menu
+# [Drop-down Menu](https://www.npmjs.com/package/drop-down-menu-module)
 [The Odin Project](https://www.theodinproject.com/) - [Exercise Drop Down Menu](https://www.theodinproject.com/courses/javascript/lessons/dynamic-user-interface-interactions#drop-down-menus).
 
 Create dropdown buttons wherever you want inside you webpage.
 
 ## Getting Started
+You can download it from [npm](https://www.npmjs.com/)
+``` sh
+npm i drop-down-menu-module
+```
+
 First you need to create an array of list elements
 ``` javascript
 let arr = [];
@@ -38,6 +43,11 @@ And remove elements with the removeElement method
 ``` javascript
 /* We pass the index of the element we want to remove */
 myDropdown.removeElement(0);
+```
+
+And with every modification you need to recall the render method
+``` javascript
+myDropdown.render();
 ```
 
 ## What have I learned?
