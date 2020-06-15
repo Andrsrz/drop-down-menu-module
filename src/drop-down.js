@@ -26,6 +26,7 @@ class Dropdown {
 		this._dropdownContainer.style.flexFlow = "column nowrap";
 		this._dropdownContainer.style.justifyContent = "flex-start";
 		this._dropdownContainer.style.alignItems = "flex-start";
+		this._dropdownContainer.style.width = "max-content";
 		this._dropdown.style.size = this.size;
 	}
 
