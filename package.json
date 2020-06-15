@@ -1,0 +1,22 @@
+{
+  "name": "drop-down-menu-module",
+  "version": "1.0.0",
+  "description": "Dropdown Menu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrsrz/drop-down-menu-module.git"
+  },
+  "author": "Andres Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andrsrz/drop-down-menu-module/issues"
+  },
+  "homepage": "https://github.com/Andrsrz/drop-down-menu-module#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  }
+}
