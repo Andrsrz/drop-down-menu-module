@@ -2,6 +2,9 @@ class Dropdown {
 	constructor(size, elements){
 		this.size = size ? size : 10;
 		this.elements = elements ? elements : [];
+		this._dropdownContainer = document.createElement("div");
+		this._dropdown = document.createElement("button");
+		this._menu = document.createElement("ul");
 	}
 
 	addElement(element){
@@ -18,19 +21,24 @@ class Dropdown {
 		}, false);
 	}
 
+	_setStyle(){
+		this._dropdownContainer.style.display = "flex";
+		this._dropdownContainer.style.flexFlow = "column nowrap";
+		this._dropdownContainer.style.justifyContent = "flex-start";
+		this._dropdownContainer.style.alignItems = "flex-start";
+		this._dropdown.style.size = this.size;
+	}
+
 	render(){
-		let dropdown = document.createElement("button");
-		dropdown.className = "dropdown";
-		dropdown.style.size = this.size;
-		this._setDropdownClickEvent(dropdown);
-		let menu = document.createElement("ul");
-		menu.className = "menu";
+		this._setStyle();
+		this._setDropdownClickEvent(this._dropdown);
 		for(let i = 0; i < this.elements.length; i++){
 			this.elements[i].className = "menuOption-" + i;
-			menu.appendChild(this.elements[i]);
+			this._menu.appendChild(this.elements[i]);
 		}
-		dropdown.appendChild(menu);
-		return dropdown;
+		this._dropdownContainer.appendChild(this._dropdown);
+		this._dropdownContainer.appendChild(this._menu);
+		return this._dropdownContainer;
 	}
 };
 
