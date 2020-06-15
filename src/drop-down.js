@@ -17,7 +17,14 @@ class Dropdown {
 
 	_setDropdownClickEvent(dropdown){
 		dropdown.addEventListener("click", () => {
-			console.log("click");
+			console.log("enter");
+			if(this._menu.style.display == "none"){
+				console.log("enter block");
+				this._menu.style.display = "inline-block";
+			}else{
+				console.log("enter none");
+				this._menu.style.display = "none";
+			}
 		}, false);
 	}
 
@@ -28,6 +35,7 @@ class Dropdown {
 		this._dropdownContainer.style.alignItems = "flex-start";
 		this._dropdownContainer.style.width = "max-content";
 		this._dropdown.style.size = this.size;
+		this._menu.style.display = "none";
 	}
 
 	render(){
