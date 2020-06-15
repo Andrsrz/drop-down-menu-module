@@ -1,12 +1,17 @@
-// import _ from 'lodash';
-import myName from './myName.js';
+import { Dropdown } from './drop-down.js';
 
-function component() {
-	const element = document.createElement('div');
+const Index = (() => {
+	const render = () => {
+		let body = document.body;
+		let item = document.createElement("li");
+		item.innerHTML = "test";
+		let arr = [];
+		arr.push(item);
+		let dropdown0 = new Dropdown(20, arr);
+		body.appendChild(dropdown0.render());
+	}
 
-	// Using my function
-	element.innerHTML = myName('Andres');
-	return element;
-}
+	return { render };
+})();
 
-document.body.appendChild(component());
+Index.render();
